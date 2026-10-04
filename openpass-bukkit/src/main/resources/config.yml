@@ -1,0 +1,40 @@
+database:
+  type: sqlite
+  mysql:
+    host: localhost
+    port: 3306
+    database: openpass
+    username: root
+    password: ""
+    pool-size: 10
+
+security:
+  timeout-seconds: 75
+  min-password-length: 6
+  max-password-length: 32
+  max-failed-attempts: 5
+  initial-ban-minutes: 15
+  ban-multiplier: 2
+  max-accounts-per-ip: 3
+
+session:
+  enabled: true
+  duration-hours: 24
+
+limbo:
+  enabled: false
+  teleport-to-spawn-on-join: false
+  world-name: auth_limbo
+  spawn-x: 0.5
+  spawn-y: 64.0
+  spawn-z: 0.5
+  spawn-yaw: 0.0
+  spawn-pitch: 0.0
+
+antibot:
+  enabled: true
+  max-joins-per-second: 8
+  max-joins-per-ip: 3
+
+license:
+  mojang-api-check: true

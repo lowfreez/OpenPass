@@ -1,0 +1,32 @@
+name: OpenPass
+version: '1.0.0'
+main: org.openpass.bukkit.OpenPassBukkitPlugin
+api-version: '26.3'
+folia-supported: true
+author: OpenPass
+commands:
+  register:
+    description: Регистрация нового аккаунта
+    aliases: [reg]
+    permission: openpass.use
+  login:
+    description: Авторизация в аккаунте
+    aliases: [l]
+    permission: openpass.use
+  changepassword:
+    description: Смена пароля
+    aliases: [changepass, cp]
+    permission: openpass.use
+  premium:
+    description: Управление режимом лицензии
+    aliases: [license]
+    permission: openpass.use
+  openpass:
+    description: Основная команда управления плагином
+    aliases: [opass]
+    permission: openpass.admin
+permissions:
+  openpass.use:
+    default: true
+  openpass.admin:
+    default: op

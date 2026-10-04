@@ -1,0 +1,4 @@
+name: OpenPass
+version: '1.0.0'
+main: org.openpass.bungee.OpenPassBungeePlugin
+author: OpenPass

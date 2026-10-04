@@ -1,0 +1,13 @@
+.gradle/
+build/
+**/build/
+!src/**/build/
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.log
+*.db
+.DS_Store
+Thumbs.db
