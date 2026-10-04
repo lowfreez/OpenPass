@@ -1,5 +1,7 @@
 <div align="center">
 
+![OpenPass Banner](https://pmqpixsjrevmngxvearu.supabase.co/storage/v1/object/public/api/openpassbanner.png)
+
 # ✦ OpenPass
 
 **Современная, быстрая и криптографически защищённая система авторизации нового поколения для Minecraft**
@@ -66,8 +68,12 @@
 | `/login <пароль>` | `/l` | Вход в систему | `openpass.use` |
 | `/changepassword <старый> <новый>` | `/changepass`, `/cp` | Смена пароля | `openpass.use` |
 | `/premium` | `/license` | Управление лицензионным режимом | `openpass.use` |
+| `/logout` | — | Выход из учётной записи | `openpass.use` |
 | `/openpass reload` | `/opass reload` | Перезагрузка конфигураций | `openpass.admin` |
 | `/openpass unban <цель>` | `/opass unban` | Снятие временной блокировки брутфорса | `openpass.admin` |
+| `/openpass unregister <игрок>` | `/opass unreg` | Сброс пароля и удаление аккаунта | `openpass.admin` |
+| `/openpass forceauth <игрок>` | — | Принудительная авторизация игрока | `openpass.admin` |
+| `/openpass info <игрок>` | — | Подробная информация об аккаунте игрока | `openpass.admin` |
 
 ---
 
@@ -91,6 +97,7 @@ security:
   max-failed-attempts: 5
   initial-ban-minutes: 15
   ban-multiplier: 2
+  max-accounts-per-ip: 3
 
 session:
   enabled: true

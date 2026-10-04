@@ -5,6 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.openpass.bukkit.auth.AuthManager;
 import org.openpass.bukkit.command.ChangePasswordCommand;
 import org.openpass.bukkit.command.LoginCommand;
+import org.openpass.bukkit.command.LogoutCommand;
 import org.openpass.bukkit.command.OpenPassAdminCommand;
 import org.openpass.bukkit.command.PremiumCommand;
 import org.openpass.bukkit.command.RegisterCommand;
@@ -77,7 +78,8 @@ public class OpenPassBukkitPlugin extends JavaPlugin {
         registerCommand("login", new LoginCommand(authManager, configManager));
         registerCommand("changepassword", new ChangePasswordCommand(authManager, configManager));
         registerCommand("premium", new PremiumCommand(authManager));
-        registerCommand("openpass", new OpenPassAdminCommand(configManager, bruteForceManager));
+        registerCommand("openpass", new OpenPassAdminCommand(configManager, bruteForceManager, authManager, databaseService));
+        registerCommand("logout", new LogoutCommand(authManager));
 
         this.sessionCleanupTask = SchedulerUtil.runAsyncRepeating(this, sessionManager::cleanup, 600L, 600L);
     }

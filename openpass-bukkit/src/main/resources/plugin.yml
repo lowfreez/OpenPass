@@ -25,6 +25,9 @@ commands:
     description: Основная команда управления плагином
     aliases: [opass]
     permission: openpass.admin
+  logout:
+    description: Выход из аккаунта
+    permission: openpass.use
 permissions:
   openpass.use:
     default: true
